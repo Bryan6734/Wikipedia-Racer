@@ -16,13 +16,21 @@ public class WikiRacer {
     private ArrayList<String> visited = new ArrayList<>();
 
     
-    public static void main(String[] args) {
-        WikiRacer racer = new WikiRacer();
-        racer.searchDFS(racer.startURL, racer.endURL, 0);
-//        racer.searchBFS(racer.startURL, racer.endURL, 0);
+//    public static void main(String[] args) {
+//        WikiRacer racer = new WikiRacer();
+//        racer.searchDFS(racer.startURL, racer.endURL, 0);
+////        racer.searchBFS(racer.startURL, racer.endURL, 0);
+//    }
+
+    public WikiRacer(){
+
     }
 
-    private boolean searchDFS(String currentURL, String endURL, int depth){
+    public ArrayList<String> getPath() {
+        return path;
+    }
+
+    public boolean searchDFS(String currentURL, String endURL, int depth){
 
         path.add(currentURL);
         visited.add(currentURL);
